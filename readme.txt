@@ -1,13 +1,17 @@
 ¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤
  
-                  - Visual Boy Advance GX (libertyernie fork) -
-                     https://github.com/libertyernie/vba-wii
-                               (Under GPL License)
+                  - Visual Boy Advance GX -
+               https://github.com/dborth/vbagx
+                     (Under GPL License)
  
 ¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤
  
 Visual Boy Advance GX is a modified port of VBA-M.
 With it you can play GBA/Game Boy Color/Game Boy games on your Wii/GameCube.
+
+-=[ Releases ]=-
+
+https://github.com/dborth/vbagx/releases
 
 -=[ Features ]=-
 
@@ -22,9 +26,6 @@ With it you can play GBA/Game Boy Color/Game Boy games on your Wii/GameCube.
 * MEM2 ROM Storage for fast access
 * Auto frame skip (optional) for those core heavy games
 * Turbo speed, video zooming, widescreen, and unfiltered video options
-
--=[ New since 2014 ]=-
-
 * Native loading/saving of ROMS and SRAM from Goomba (a GB emulator for GBA)
 * Improved video rendering from RetroArch
 * Screenshots can be displayed on the main menu
@@ -36,6 +37,20 @@ With it you can play GBA/Game Boy Color/Game Boy games on your Wii/GameCube.
 ×—–­—–­—–­—–­ –­—–­—–­—–­—–­—–­—–­—–­—–­—–­— ­—–­—–­—–­—–­—–­—–­—–­—-­—–­-–•¬
 |0O×øo·                         UPDATE HISTORY                        ·oø×O0|
 `¨•¨¨¨¨¨ ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ ¨¨¨¨¨¨¨¨¨¨¨¨¨'
+[2.3.4]
+
+* fix crash caused by forgetting to remove a GUI element from the main
+  window when switching menus
+
+
+[2.3.3]
+
+* fixes the gc pad down on file browser
+* added koston default green gb color screen
+* added the screenshot/preview button
+* added the wiiupro icon on the controller settings
+* increased and centered the screenshot image
+* added the screenshot white image background
 
 [2.3.2 - March 4, 2015] - libertyernie
 
@@ -78,7 +93,7 @@ With it you can play GBA/Game Boy Color/Game Boy games on your Wii/GameCube.
 * VBA-M core updated to r1231
 * Tiled rendering used for GBA games (new VBA-M feature, originally from
   RetroArch) - provides a major speed boost!
-* Changes from cebolleto's version (bit.ly/1uqb6wW):
+* Changes from cebolleto's version
   * Screenshots can be displayed for each game on the menu
   * Nicer 7-Zip support
   * When you leave a folder, the folder you just left will be selected
@@ -679,7 +694,7 @@ Medal Of Honour Underground, Medal Of Honour Infiltrator
 One Piece can be played with One Piece Unlimited Adventure controls.
 
 Boktai 1, Boktai 2, Boktai 3, and Kirby's Tilt n Tumble can be played with
-controls Tantric designed for them.
+controls designed for them.
 
 -=[ Zelda, Match Wii Controls ]=-
 
@@ -1121,16 +1136,14 @@ switched items since then.
  
 -=[ Credits ]=-
 
+			Coding & menu design		Tantric
 			Codebase update & Goomba	libertyernie
 			Menu screenshots			cebolleto
 			GBA tiled rendering			bgK (for RetroArch)
-			
-			¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-			Coding & menu design		Tantric
 			Additional coding			Carl Kenner, dancinninjac
 			Menu artwork				the3seashells
 			Menu sound					Peter de Man
-                      
+
 			¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 			VBA GameCube/Wii			SoftDev, emukidid
 
@@ -1143,7 +1156,7 @@ switched items since then.
  
 ¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤
  
-                              Original VBAGX Web Site
-                          http://code.google.com/p/vba-wii
+                                  VBAGX Web Site
+                          https://github.com/dborth/vbagx
  
 ¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤°`°¤ø,¸,ø¤°`°¤ø,¸¸,ø¤

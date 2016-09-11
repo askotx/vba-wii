@@ -245,8 +245,8 @@ ftgxCharData *FreeTypeGX::cacheGlyphData(wchar_t charCode)
 
 			this->fontData[charCode] = (ftgxCharData){
 				(s16)(ftSlot->bitmap_left),
-+				(u16)(ftSlot->advance.x >> 6),
-+				(u16)(gIndex),
+				(u16)(ftSlot->advance.x >> 6),
+				(u16)(gIndex),
 				textureWidth,
 				textureHeight,
 				(s16)(ftSlot->bitmap_top),

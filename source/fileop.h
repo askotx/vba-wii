@@ -18,7 +18,6 @@
 #include <fat.h>
 #include <unistd.h>
 
-//#define SAVEBUFFERSIZE (1024 * 1024 * 2)
 #define SAVEBUFFERSIZE (1024 * 512)
 
 void InitDeviceThread();

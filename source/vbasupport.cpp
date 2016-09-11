@@ -490,6 +490,30 @@ bool SaveBatteryOrStateAuto(int action, bool silent)
 
 	return SaveBatteryOrState(filepath, action, silent);
 }
+/****************************************************************************
+ * Save Screenshot / Preview image
+ ***************************************************************************/
+
+int SavePreviewImg(char * filepath, bool silent)
+{
+	int device;
+	
+	if(!FindDevice(filepath, &device))
+		return 0;
+
+	if(gameScreenPngSize > 0)
+	{
+		char screenpath[1024];
+		strcpy(screenpath, filepath);
+		screenpath[strlen(screenpath)] = 0;
+		sprintf(screenpath, "%s.png", screenpath);
+		SaveFile((char *)gameScreenPng, screenpath, gameScreenPngSize, silent);
+	}
+
+	if(!silent)
+		InfoPrompt ("Save successful");
+	return 1;
+}
 
 /****************************************************************************
 * Sound
@@ -1286,9 +1310,9 @@ void InitialisePalette()
 	// Build GBPalette
 	for( i = 0; i < 24; )
 	{
-		systemGbPalette[i++] = (0x1f) | (0x1f << 5) | (0x1f << 10);
-		systemGbPalette[i++] = (0x15) | (0x15 << 5) | (0x15 << 10);
-		systemGbPalette[i++] = (0x0c) | (0x0c << 5) | (0x0c << 10);
+		systemGbPalette[i++] = (0x1c) | (0x1e << 5) | (0x1c << 10);
+		systemGbPalette[i++] = (0x10) | (0x17 << 5) | (0x0b << 10);
+		systemGbPalette[i++] = (0x27) | (0x0c << 5) | (0x0a << 10);
 		systemGbPalette[i++] = 0;
 	}
 	// Set palette etc - Fixed to RGB565

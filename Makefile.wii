@@ -29,7 +29,7 @@ INCLUDES 	:=  source source/vba
 #---------------------------------------------------------------------------------
 
 CFLAGS		=	-g -O3 -Wall $(MACHDEP) $(INCLUDE) \
-				-DWORDS_BIGENDIAN -DNO_LINK -DNO_FEX \
+				-DNO_SOUND -DWORDS_BIGENDIAN -DNO_LINK -DNO_FEX \
 				-DTILED_RENDERING \
 				-DC_CORE -D__ppc__ -D__POWERPC__ -DFINAL_VERSION \
 				-DSDL -DNO_PNG -DHAVE_ZUTIL_H \

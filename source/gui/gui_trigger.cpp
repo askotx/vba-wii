@@ -272,6 +272,7 @@ bool GuiTrigger::Down()
 
 	if(((wpad->btns_d | wpad->btns_h) & (wiibtn | WPAD_CLASSIC_BUTTON_DOWN))
 			|| ((wupcdata.btns_d | wupcdata.btns_h) & (wiibtn | WPAD_CLASSIC_BUTTON_DOWN))
+			|| (pad.btns_d | pad.btns_h) & PAD_BUTTON_DOWN
 			|| pad.stickY < -PADCAL
 			|| WPAD_StickY(0) < -PADCAL
 			|| wupcdata.stickY < -WUPCCAL)
