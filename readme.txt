@@ -39,9 +39,12 @@ https://github.com/dborth/vbagx/releases
 `иХиииии ииииииииииииииии иииииииииииииии ииииииииииииииииииии иииииииииииии'
 [2.3.4]
 
+* updated version file
 * fix crash caused by forgetting to remove a GUI element from the main
   window when switching menus
-
+* added several contributions by Zopenko
+* added wiiflow plugin mode by fix94
+* fix filebrowser window overlapping 
 
 [2.3.3]
 
