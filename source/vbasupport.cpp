@@ -1310,9 +1310,19 @@ void InitialisePalette()
 	// Build GBPalette
 	for( i = 0; i < 24; )
 	{
-		systemGbPalette[i++] = (0x1c) | (0x1e << 5) | (0x1c << 10);
-		systemGbPalette[i++] = (0x10) | (0x17 << 5) | (0x0b << 10);
-		systemGbPalette[i++] = (0x27) | (0x0c << 5) | (0x0a << 10);
+
+		if (GCSettings.BasicPalette == 0) //Greenish color
+		{
+			systemGbPalette[i++] = (0x1c) | (0x1e << 5) | (0x1c << 10);
+			systemGbPalette[i++] = (0x10) | (0x17 << 5) | (0x0b << 10);
+			systemGbPalette[i++] = (0x27) | (0x0c << 5) | (0x0a << 10);
+		}
+		else	// Monochrome color
+		{
+			systemGbPalette[i++] = (0x1f) | (0x1f << 5) | (0x1f << 10);
+			systemGbPalette[i++] = (0x15) | (0x15 << 5) | (0x15 << 10);
+			systemGbPalette[i++] = (0x0c) | (0x0c << 5) | (0x0c << 10);
+		}
 		systemGbPalette[i++] = 0;
 	}
 	// Set palette etc - Fixed to RGB565

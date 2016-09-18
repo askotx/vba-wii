@@ -172,6 +172,9 @@ preparePrefsData ()
 	//createXMLSetting("CheatFolder", "Cheats Folder", GCSettings.CheatFolder);
 	createXMLSetting("ScreenshotsFolder", "Screenshots Folder", GCSettings.ScreenshotsFolder);
 	createXMLSetting("BorderFolder", "SGB Borders Folder", GCSettings.BorderFolder);
+	createXMLSetting("CoverFolder", "Covers Folder", GCSettings.CoverFolder);
+	createXMLSetting("ArtworkFolder", "Artworks Folder", GCSettings.ArtworkFolder);
+	createXMLSetting("ImageFolder", "Image Folder", GCSettings.ImageFolder);
 
 	createXMLSection("Network", "Network Settings");
 
@@ -204,7 +207,12 @@ preparePrefsData ()
 	createXMLSetting("SFXVolume", "Sound Effects Volume", toStr(GCSettings.SFXVolume));
 	createXMLSetting("Rumble", "Rumble", toStr(GCSettings.Rumble));
 	createXMLSetting("language", "Language", toStr(GCSettings.language));
+	createXMLSetting("PreviewImage", "Preview Image", toStr(GCSettings.PreviewImage));
 
+	createXMLSection("Emulation", "Emulation Settings");
+
+	createXMLSetting("BasicPalette", "Basic Color Palette for GB", toStr(GCSettings.BasicPalette));
+	
 	createXMLSection("Controller", "Controller Settings");
 
 	createXMLSetting("WiiControls", "Match Wii Game", toStr(GCSettings.WiiControls));
@@ -484,6 +492,9 @@ decodePrefsData ()
 			//loadXMLSetting(GCSettings.CheatFolder, "CheatFolder", sizeof(GCSettings.CheatFolder));
 			loadXMLSetting(GCSettings.ScreenshotsFolder, "ScreenshotsFolder", sizeof(GCSettings.ScreenshotsFolder));
 			loadXMLSetting(GCSettings.BorderFolder, "BorderFolder", sizeof(GCSettings.BorderFolder));
+			loadXMLSetting(GCSettings.CoverFolder, "CoverFolder", sizeof(GCSettings.CoverFolder));
+			loadXMLSetting(GCSettings.ArtworkFolder, "ArtworkFolder", sizeof(GCSettings.ArtworkFolder));
+			loadXMLSetting(GCSettings.ImageFolder, "ImageFolder", sizeof(GCSettings.ImageFolder));
 
 			// Network Settings
 
@@ -516,6 +527,7 @@ decodePrefsData ()
 			loadXMLSetting(&GCSettings.SFXVolume, "SFXVolume");
 			loadXMLSetting(&GCSettings.Rumble, "Rumble");
 			loadXMLSetting(&GCSettings.language, "language");
+			loadXMLSetting(&GCSettings.PreviewImage, "PreviewImage");
 
 			// Controller Settings
 
@@ -530,6 +542,8 @@ decodePrefsData ()
 			loadXMLSetting(&GCSettings.OffsetMinutesUTC, "OffsetMinutesUTC");
 			loadXMLSetting(&GCSettings.GBHardware, "GBHardware");
 			loadXMLSetting(&GCSettings.SGBBorder, "SGBBorder");
+			loadXMLSetting(&GCSettings.BasicPalette, "BasicPalette");
+
 		}
 		mxmlDelete(xml);
 	}
@@ -628,6 +642,10 @@ DefaultSettings ()
 	sprintf (GCSettings.CheatFolder, "%s/cheats", APPFOLDER); // Path to cheat files
 	sprintf (GCSettings.ScreenshotsFolder, "%s/screenshots", APPFOLDER);
 	sprintf (GCSettings.BorderFolder, "%s/borders", APPFOLDER);
+	sprintf (GCSettings.CoverFolder, "%s/covers", APPFOLDER); // Path to cover files
+	sprintf (GCSettings.ArtworkFolder, "%s/artworks", APPFOLDER); // Path to artwork files
+	sprintf (GCSettings.ImageFolder, "%s/screenshots", APPFOLDER);
+
 	GCSettings.AutoLoad = 1;
 	GCSettings.AutoSave = 1;
 	GCSettings.AppendAuto = 1;
@@ -655,6 +673,10 @@ DefaultSettings ()
 	GCSettings.MusicVolume = 40;
 	GCSettings.SFXVolume = 40;
 	GCSettings.Rumble = 1;
+	GCSettings.PreviewImage = 0;
+	
+	GCSettings.BasicPalette = 0;
+	
 #ifdef HW_RVL
 	GCSettings.language = CONF_GetLanguage();
 

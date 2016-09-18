@@ -88,14 +88,21 @@ struct SGCSettings{
 	int		SFXVolume;
 	int		Rumble;
 	int 	language;
+	int		PreviewImage;
+	
 	int		OffsetMinutesUTC; // Used for clock on MBC3 and TAMA5
 	int 	GBHardware;    // Mapped to gbEmulatorType in VBA
 	int 	SGBBorder;
+	int		BasicPalette;	// 0 - Green   1 - Monochrome
+	
 	char	LoadFolder[MAXPATHLEN];  // Path to game files
 	char	LastFileLoaded[MAXPATHLEN]; //Last file loaded filename
 	char	SaveFolder[MAXPATHLEN];  // Path to save files
 	char	CheatFolder[MAXPATHLEN]; // Path to cheat files
 	char	ScreenshotsFolder[MAXPATHLEN]; //Path to screenshots files
+	char	CoverFolder[MAXPATHLEN]; 	//Path to cover files
+	char	ArtworkFolder[MAXPATHLEN]; 	//Path to artwork files
+	char 	ImageFolder[MAXPATHLEN]; 	//Saved image folder path 
 	char	BorderFolder[MAXPATHLEN];  // Path to Super Game Boy border files
 
 	char	Exit_Dol_File[MAXPATHLEN]; // Exit Path
